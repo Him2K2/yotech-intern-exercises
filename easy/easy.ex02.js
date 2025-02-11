@@ -12,6 +12,11 @@ function tinhMu(number01, number02) {
    if (number02 < 0) return 1 / tinhMu(number01, -number02);
    return number01 * tinhMu(number01, number02 - 1);
 }
+module.exports = {
+   tinhMu,
+ };
+
+
 // Unit test
 const testCase = [
    { input: [5, 2], expect: 25 },

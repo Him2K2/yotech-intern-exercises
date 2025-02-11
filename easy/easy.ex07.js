@@ -1,11 +1,14 @@
-const array = [1, 2, 3];
+/**
+ * Sum of odd numbers in an array
+ */
+const { run } = require("../utils/runtest.utils.js");
 
-const sumEven = array.reduce((total, value) => {
+function oddEven(array) {
+  return array.reduce((total, value) => {
     return value % 2 === 1 ? total + value : total;
-}, 0);
-
-
-//Unit test 
-if(sumEven === 4){
-    console.log(true);
+  }, 0);
 }
+//Unit test
+let array = [1, 2, 3, 4, 5];
+const testCase = [{ input: [array], expect: 9 }];
+run(testCase, oddEven, 7);

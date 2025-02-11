@@ -21,9 +21,9 @@ function swapThreeNumbers(number01, number02, number03) {
     ? [number02, number01, number03]
     : [number02, number03, number01];
 }
-// module.exports = {
-//   run: swapThreeNumbers
-// };
+module.exports = {
+  swapThreeNumbers,
+};
 
 // Unit tests
 const testCase = [

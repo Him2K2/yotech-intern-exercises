@@ -1,4 +1,11 @@
-function timSoDu(soChia,soBiChia){
+/**
+ * 
+ * @param {number} soChia 
+ * @param {number} soBiChia 
+ * @returns Find the remainder when dividing two numbers
+ */
+
+function findRemainder(soChia,soBiChia){
     if(soBiChia===0){
         return false;
     }
@@ -11,4 +18,4 @@ function timSoDu(soChia,soBiChia){
    }
    return soChia
 }
-console.log(timSoDu(5,2))
+console.log(findBalance(5,2))
