@@ -1,14 +1,20 @@
-var demChan = 0;
-function demSo(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 === 1) {
-      demChan++;
-    }
-  }
-}
-let arr = [1, 2, 3, 4, 5];
-demSo(arr);
+/**
+ * return the number of odd numbers in the array
+ */
 
-if (demChan === 3) {
-  console.log(true);
+const { run } = require('../utils/runtest.utils.js');
+
+function countOddNumber(array) {
+  let countNumber = 0;
+  array.forEach(num => {
+    if (num % 2 === 1) countNumber++;
+  });
+  return countNumber;
 }
+let array = [2,4,5,6,445,666,555,777,888]
+
+const testCase = [
+  { input: [array], expect:4  }
+]
+
+run(testCase, countOddNumber, 5);

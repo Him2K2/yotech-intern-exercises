@@ -1,6 +1,6 @@
-const arr = [1, 2, 3];
+const array = [1, 2, 3];
 
-const sumEven = arr.reduce((total, value) => {
+const sumEven = array.reduce((total, value) => {
     return value % 2 === 1 ? total + value : total;
 }, 0);
 
