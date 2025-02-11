@@ -26,15 +26,20 @@ module.exports = {
 
 // Unit tests
 let a = 1,
-  b = 2,
-  c = 3;
+  b = a+1,
+  c = b+1;
+
+for (a; i < 4; a++) {
+  [a, b, c] = swapThreeNumbers(a, b, c);
+  
+}
 [a, b, c] = swapThreeNumbers(a, b, c);
-console.log(a === 2 && b === 3 && c === 1);
+console.log(`ex1:testcase1:${a === 2 && b === 3 && c === 1}`);
 
 
 (a = 2), (b = 2), (c = 5);
 [a, b, c] = swapThreeNumbers(a, b, c);
-console.log(a === 5 && b === 2 && c === 2);
+console.log(console.log(`ex1:testcase2:${a === 5 && b === 2 && c === 2}`));
 
 // normal case
 // abnormal case

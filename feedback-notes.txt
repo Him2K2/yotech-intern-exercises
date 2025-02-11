@@ -7,4 +7,4 @@
 7. Không dùng lẫn lộn các ngôn ngữ trong code 
 8. Không viết tắt trong code
 9. Làm chính xác đề bài yêu cầu 
-10. Tcìm hiểu từ chuyên ngành về đặc tính của javascript khi cho phép ác function khai báo ở dưới nhưng vẫn có thể sử dụng ở trên 
+10. Tìm hiểu từ chuyên ngành về đặc tính của javascript khi cho phép ác function khai báo ở dưới nhưng vẫn có thể sử dụng ở trên? // Hoisting

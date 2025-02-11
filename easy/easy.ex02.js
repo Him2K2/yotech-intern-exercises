@@ -1,11 +1,15 @@
+/**
+ * 
+ * @param {number} number01 
+ * @param {number} number02 
+ * @returns number the result of number01 to the power of number02
+ */
 function tinhMu(number01, number02) {
    if (number02 === 0) return 1;
    if (number02 < 0) return 1 / tinhMu(number01, -number02);
    return number01 * tinhMu(number01, number02 - 1);
 }
 
-// const ex1 = require('./easy.ex01');
-// ex1.run()
 
 // Unit test
 let testGiaTriBinhThuong = tinhMu(5, 2); 
