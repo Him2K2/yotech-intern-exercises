@@ -1,29 +1,13 @@
-function sapXep(arr, cachSapXep) {
-    switch (cachSapXep) {
-        case "up": 
-            for (let i = 0; i < arr.length - 1; i++) {
-                for (let j = 0; j < arr.length - i - 1; j++) {
-                    if (arr[j] > arr[j + 1]) {
-                        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]; 
-                    }
-                }
-            }
-            break;
+/**
+ * input: string 'up', 'down'
+ * output: array sorted by input
+ */
+const arrayUtils = require('../utils/array.utils');
 
-        case "down": 
-            for (let i = 0; i < arr.length - 1; i++) {
-                for (let j = 0; j < arr.length - i - 1; j++) {
-                    if (arr[j] < arr[j + 1]) {
-                        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]; 
-                    }
-                }
-            }
-            break;
-
-    }
-    return arr;
+function sort(array, direction) {
+    return arrayUtils.sort(array, direction)
 }
 
+console.log(sort([5, 2, 9, 1, 5, 6], "up"));  
+console.log(sort([5, 2, 9, 1, 5, 6], "down")); 
 
-console.log(sapXep([5, 2, 9, 1, 5, 6], "up"));  
-console.log(sapXep([5, 2, 9, 1, 5, 6], "down")); 

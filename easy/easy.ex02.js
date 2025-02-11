@@ -4,6 +4,9 @@ function tinhMu(number01, number02) {
    return number01 * tinhMu(number01, number02 - 1);
 }
 
+// const ex1 = require('./easy.ex01');
+// ex1.run()
+
 // Unit test
 let testGiaTriBinhThuong = tinhMu(5, 2); 
 let testGiaTriBang0 = tinhMu(5, 0);

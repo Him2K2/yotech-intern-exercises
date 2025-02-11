@@ -1,0 +1,10 @@
+1. Tìm cách chạy 1 phát hết tất cả testcase của tất cả các bài
+2. Tìm cách implement để gọi function cần test đúng 1 dòng mà vẫn test đủ các testcase
+3. Cần phân biệt được các phần với nhau, các test case với nhau 
+4. Nếu có 1 test case bị fail thì cần biết ngay lập tức đó là test case nào và của bài nào 
+5. Có tổng kết báo cáo về số lượng pass, số lượng fail, %pass / tổng 
+6. Dùng English thay cho Tiếng Việt 
+7. Không dùng lẫn lộn các ngôn ngữ trong code 
+8. Không viết tắt trong code
+9. Làm chính xác đề bài yêu cầu 
+10. Tcìm hiểu từ chuyên ngành về đặc tính của javascript khi cho phép ác function khai báo ở dưới nhưng vẫn có thể sử dụng ở trên 

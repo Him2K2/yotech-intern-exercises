@@ -1,38 +1,41 @@
 /**
- * 
- * @param {*} number01 
- * @param {*} number02 
- * @param {*} number3 
- * @returns 
+ *
+ * @param {number} number01 the first number to swap
+ * @param {number} number02 the second number to swap
+ * @param {number} number03 the third number to swap
+ * @returns [number, number, number] the swapped values of three numbers
  */
-function swapThreeNumbers(number01, number02, number3) {
-  if (number01 === number02) {
-    return [number3, number02, number01];
-  } else if (number01 === number3) {
-    return [number02, number01, number3];
-  } else {
-    return [number02, number3, number01];
-  }
+function swapThreeNumbers(number01, number02, number03) {
+  // if (number01 === number02) {
+  //   return [number03, number02, number01];
+  // }
+  // if (number01 === number03) {
+  //   return [number02, number01, number03];
+  // }
+  // return [number02, number03, number01];
+  return number01 === number02
+    ? [number03, number02, number01]
+    : number01 === number03
+    ? [number02, number01, number03]
+    : [number02, number03, number01];
 }
+
+module.exports = {
+  run: swapThreeNumbers
+};
 
 // Unit tests
-let a = 1, b = 2, c = 3;
+let a = 1,
+  b = 2,
+  c = 3;
 [a, b, c] = swapThreeNumbers(a, b, c);
-if (a === 2 && b === 3 && c === 1) {
-    console.log(true);
-} else {
-    console.log(false);
-}
+console.log(a === 2 && b === 3 && c === 1);
 
-a = 2, b = 2, c = 5;
+
+(a = 2), (b = 2), (c = 5);
 [a, b, c] = swapThreeNumbers(a, b, c);
-if (a === 5 && b === 2 && c === 2) {
-    console.log(true);
-} else {
-    console.log(false);
-}
+console.log(a === 5 && b === 2 && c === 2);
 
 // normal case
 // abnormal case
 // edge case
-
