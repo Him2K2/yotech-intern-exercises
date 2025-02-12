@@ -1,6 +1,14 @@
+const { run } = require("../utils/runtest.utils");
+
+/**
+ *
+ * @param {*} gioVao //giờ vào phongf
+ * @param {*} gioRa // giờ ra phòng
+ * @returns //số tiền phải trả cho giờ thuê không quá 24h
+ */
 function tinhTienNhaNghi(gioVao, gioRa) {
   let tongTien = 0;
-//qua dem
+  //qua dem
   if (gioVao < 24 && gioRa >= 24) {
     tongTien += 160;
 
@@ -24,4 +32,9 @@ function tinhTienNhaNghi(gioVao, gioRa) {
 
   return tongTien;
 }
-console.log(tinhTienNhaNghi(12, 18)); 
+const testCase = [
+  { input: [8, 15], expect: 390 },
+  { input: [22, 26], expect: 160 },
+  { input: [22, 23], expect: 70 },
+];
+run(testCase, tinhTienNhaNghi, 13);

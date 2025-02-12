@@ -1,11 +1,19 @@
-function timViTri(chuoi1, chuoi2) {
-  let mang1 = chuoi1.split("");// Chuyển chuỗi1  thành mảng ký tự
-  let mang2 = chuoi2.split("");
+const { run } = require("../utils/runtest.utils");
 
-  for (let i = 0; i <= mang2.length - mang1.length; i++) {
+/**
+ * 
+ * @param {*} stringDad 
+ * @param {*} stringSon 
+ * @returns //return index of string2 in string1
+ */
+function findIndexStartString2InString1(stringDad, stringSon) {
+  let string1 = stringDad.split("");
+  let string2 = stringSon.split("");
+
+  for (let i = 0; i <= string2.length - string1.length; i++) {
     let match = true;
-    for (let j = 0; j < mang1.length; j++) {
-      if (mang2[i + j] !== mang1[j]) {
+    for (let j = 0; j < string1.length; j++) {
+      if (string2[i + j] !== string1[j]) {
         match = false;
         break;
       }
@@ -15,4 +23,13 @@ function timViTri(chuoi1, chuoi2) {
   return -1;
 }
 
-console.log(timViTri("abc","acabcjfid"));
+//unit test
+let string1 = "abc";
+let string2 = "acabcjfid";
+let string3 = "aaaaaaa";
+
+const testCase = [
+  { input: [string1, string2], expect: 2 },
+  { input: [string1, string3], expect: -1 },
+]
+run(testCase, findIndexStartString2InString1, 8);

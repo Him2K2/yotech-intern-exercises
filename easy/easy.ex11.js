@@ -27,4 +27,4 @@ const testCase = [
   { input: [arr1], expect: 1 },
   { input: [arr2], expect: 10 },
 ];
-run(testCase, findMinValue, 10);
+run(testCase, findMinValue, 11);

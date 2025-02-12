@@ -1,28 +1,25 @@
 /**
- * return the number of even numbers in the array
+ * return the number of odd numbers in the array
  */
 
-// const { run } = require('../utils/runtest.utils.js');
+const { run } = require('../utils/runtest.utils.js');
 
-function countEvenNumber(array) {
+function countNumber(array) {
   let countNumber = 0;
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] % 2 === 0) countNumber++;
-  }
+  array.forEach(num => {
+    if (num % 2 === 0) countNumber++;
+  });
   return countNumber;
 }
 module.exports = {
-  countEvenNumber,
+  countOddNumber: countNumber,
 };
 
 //unit test
-var array = [2, 4, 5, 6, 445, 666, 555, 777, 888];
-if (countEvenNumber(array) === 5) {
-  console.log("test passed");
-}
+let array = [2,4,5,6,445,666,555,777,888]
 
-// const testCase = [
-//   { input: array, expect: 5 }
-// ]
+const testCase = [
+  { input: [array], expect:5  }
+]
 
-// run(testCase, countEvenNumber, 4);
+run(testCase, countNumber, 4);
