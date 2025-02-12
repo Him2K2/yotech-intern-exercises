@@ -8,6 +8,9 @@ function oddEven(array) {
     return value % 2 === 1 ? total + value : total;
   }, 0);
 }
+module.exports = {
+  oddEven,
+};
 //Unit test
 let array = [1, 2, 3, 4, 5];
 const testCase = [{ input: [array], expect: 9 }];

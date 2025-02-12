@@ -11,6 +11,9 @@ function isPrimeNumber(number01) {
   }
   return true;
 }
+module.exports = {
+  isPrimeNumber,
+};
 
 //unit test
 const testCase = [

@@ -15,6 +15,10 @@ function dongNhat(number1, number2) {
     return "1 even number, 1 odd number";
   }
 }
+module.exports = {
+  dongNhat,
+};
+
 
 // Unit test
 const testCase = [

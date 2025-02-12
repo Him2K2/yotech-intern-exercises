@@ -11,6 +11,11 @@ function countOddNumber(array) {
   });
   return countNumber;
 }
+module.exports = {
+  countOddNumber,
+};
+
+//unit test
 let array = [2,4,5,6,445,666,555,777,888]
 
 const testCase = [

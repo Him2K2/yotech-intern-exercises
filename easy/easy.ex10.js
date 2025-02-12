@@ -1,11 +1,31 @@
-function timGiaTriLonNhat(arr) {
-  for (let i = 0; i <= arr.length; i++) {
-    if (soNhoNhat <= arr[i]) {
-      soNhoNhat = arr[i];
+/**
+ *
+ * @param {number} array //array of numbers
+ * @returns //max number in the array
+ */
+const { run } = require("../utils/runtest.utils");
+
+function findMaxValue(array) {
+  var maxNumber = array[0];
+
+  for (let i = 1; i < array.length; i++) {
+    if (array[i] > maxNumber) {
+      maxNumber = array[i];
     }
   }
-  return soNhoNhat;
+
+  return maxNumber;
 }
-arr = [1, 2, 3, 4, 5];
-var soNhoNhat = arr[0];
-console.log(timGiaTriLonNhat(arr));
+module.exports = {
+  findMaxValue,
+};
+
+
+//unit test
+let arr = [1, 2, 3, 4, 5];
+let arr2 = [11, 92, 100, 10];
+const testCase = [
+  { input: [arr], expect: 5 },
+  { input: [arr2], expect: 100 },
+];
+run(testCase, findMaxValue, 10);

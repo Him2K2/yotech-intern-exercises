@@ -1,11 +1,28 @@
-function tinhTrungBinh(arr) {
-  let tong = 0;
-  for (let i = 0; i <= arr.length-1; i++) {
-    tong = tong + arr[i];
+/**
+ * 
+ * @param {number} array array of numbers 
+ * @returns the average of the array
+ */
+const { run } = require("../utils/runtest.utils");
+function calculateAverage(array) {
+  let sum = 0;
+  for (let i = 0; i <= array.length-1; i++) {
+    sum = sum + array[i];
   }
-  var giaTriTrungBinh = tong / arr.length;
-  return giaTriTrungBinh;
+  var averageValue = sum / array.length;
+  return averageValue;
 }
-arr = [1, 2, 3, 4, 5];
 
-console.log(tinhTrungBinh(arr));
+module.exports = {
+  calculateAverage,
+};
+
+
+//unit test
+let arr1 = [1, 2, 3, 4, 5];
+let arr2 = [11, 92, 100, 10];
+const testCase = [
+  { input: [arr1], expect: 3 },
+  { input: [arr2], expect: 53.25 },
+]
+run(testCase, calculateAverage, 12);
