@@ -21,12 +21,17 @@ function findTheMinMoneyCount(money, moneyTypes) {
         moneyCount += moneyTypeCount;
         money -= moneyTypeCount * moneyType;
     });
-    console.log(moneyStatistic);
+    // console.log(moneyStatistic);
     return moneyCount;
 }
+// let moneyCount = findTheMinMoneyCount(1300000, [1000, 2000, 5000, 10000, 50000, 100000, 200000, 500000]);
 
 //unit test
 
-let moneyCount = findTheMinMoneyCount(1300000, [1000, 2000, 5000, 10000, 50000, 100000, 200000, 500000]);
-console.log(moneyCount);
+const testCase = [
+    { input: [1300000, [1000, 2000, 5000, 10000, 50000, 100000, 200000, 500000]], expect: 4 },
+    { input: [250000, [1000, 2000, 5000, 10000, 50000, 100000, 200000, 500000]], expect: 2 },
+    { input: [0, [1000, 2000, 5000, 10000, 50000, 100000, 200000, 500000]], expect: -1 },
+]
+run(testCase, findTheMinMoneyCount, 8);
 

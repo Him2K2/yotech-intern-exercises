@@ -20,7 +20,7 @@ function linkArray(array1, array2) {
 //unit test
 let arr1 = [1, 2, 3];
 let arr2 = [4, 5, 6];
-run([{ input: [arr1, arr2], expect: [1, 2, 3, 4, 5, 6] }], linkArray, 7);
+run([{ input: [arr1, arr2], expect: [1, 2, 3, 4, 5, 6] }], linkArray, 2);
 
 
 

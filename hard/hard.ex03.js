@@ -1,24 +1,42 @@
-function tron2Mang(arr1, arr2) {
-  let arrTron = [];
+const { run } = require("../utils/runtest.utils");
+
+/**
+ *
+ * @param {*} array1 //aray input sorted increment
+ * @param {*} array2 //array input sorted increment
+ * @returns //array = arr2 + arr1 increment
+ */
+function merge2Array(array1, array2) {
+  let arrMerge = [];
   let i = 0,
     j = 0,
     k = 0;
 
-  while (i < arr1.length && j < arr2.length) {
-    if (arr1[i] < arr2[j]) {
-      arrTron[k++] = arr1[i++];
+  while (i < array1.length && j < array2.length) {
+    if (array1[i] < array2[j]) {
+      arrMerge[k++] = array1[i++];
     } else {
-      arrTron[k++] = arr2[j++];
+      arrMerge[k++] = array2[j++];
     }
   }
 
-  while (i < arr1.length) {
-    arrTron[k++] = arr1[i++];
+  while (i < array1.length) {
+    arrMerge[k++] = array1[i++];
   }
-  while (j < arr2.length) {
-    arrTron[k++] = arr2[j++];
+  while (j < array2.length) {
+    arrMerge[k++] = array2[j++];
   }
 
-  return arrTron;
+  return arrMerge;
 }
-console.log(tron2Mang([1, 3, 5], [2, 4, 6]));
+//unit test
+const testCase = [
+  {
+    input: [
+      [1, 3, 5],
+      [2, 4, 6],
+    ],
+    expect: [1, 2, 3, 4, 5, 6],
+  },
+];
+run(testCase, merge2Array,3);

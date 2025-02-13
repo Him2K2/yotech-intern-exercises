@@ -1,22 +1,22 @@
 console.log("Report: Easy exercises");
-
-const ex1 = require('./easy.ex01');
+const { counter } = require('../utils/runtest.utils');
+const ex01 = require('./easy.ex01');
 // ex1.swapThreeNumbers()
-const ex2 = require('./easy.ex02');
+const ex02 = require('./easy.ex02');
 // ex2.tinhMu()
-const ex3 = require('./easy.ex03');
+const ex03 = require('./easy.ex03');
 // ex3.dongNhat()
-const ex4 = require('./easy.ex04');
+const ex04 = require('./easy.ex04');
 // ex4.countEvenNumber()
-const ex5 = require('./easy.ex05');
+const ex05 = require('./easy.ex05');
 // ex5.countOddNumber()
-const ex6 = require('./easy.ex06');
+const ex06 = require('./easy.ex06');
 // ex6.sumEven()
-const ex7 = require('./easy.ex07');
+const ex07 = require('./easy.ex07');
 // ex7.oddEven()
-const ex8 = require('./easy.ex08');
+const ex08= require('./easy.ex08');
 // ex8.isPrimeNumber()
-const ex9 = require('./easy.ex09');
+const ex09 = require('./easy.ex09');
 // ex9.findRemainder()
 const ex10 = require('./easy.ex10');
 // ex10.findMaxValue()
@@ -30,3 +30,5 @@ const ex14 = require('./easy.ex14');
 // ex14.findNumber()
 const ex15 = require('./easy.ex15');
 // ex15.calculateFactorial()
+
+console.log("Total Passed Cases:", counter.value,"/82")

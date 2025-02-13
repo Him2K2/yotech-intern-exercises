@@ -32,7 +32,7 @@ const testCase = [
   { input: ["ababababab", "ab"], expect: 5 },
   { input: ["abcdef", "a"], expect: 1 },
   { input: ["abcaef", "a"], expect: 2 },
-  { input: ["aabbaa", " "], expect: -1 },
+  { input: ["aabbaa", ""], expect: -1 },
   { input: ["aabbaa", "aasadasas"], expect: 0 },
 ];
 run(testCase, demChuoi, 9);

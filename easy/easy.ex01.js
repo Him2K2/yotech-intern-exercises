@@ -25,4 +25,4 @@ const testCases = [
   {input: [1, 3, 3], expect: [3, 3, 1]}
 ];
 
-run(testCases, swapThreeNumbers, 1);
+run(testCases, swapThreeNumbers,1);

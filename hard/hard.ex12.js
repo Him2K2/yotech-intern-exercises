@@ -1,4 +1,8 @@
+/**
+ * return the index of the first tailing zero in the factorial of a number if dont have return -1
+ */
 const{calculateFactorial} = require('../utils/factorial.utils');
+const { run } = require('../utils/runtest.utils');
 
 function findTailNumber(number) {
     let result = calculateFactorial(number);
@@ -8,5 +12,13 @@ function findTailNumber(number) {
         if (strResult[i] == "0") {
             return i}
 }
+return -1;
 }
-console.log(findTailNumber(5)); //fisrt number 0 index 2 
+
+//unit test
+const testCase = [
+    { input: [5], expect: 2 },
+    { input: [1], expect: -1 },
+    { input: [6], expect: 2 },
+];
+run(testCase, findTailNumber, 12);
