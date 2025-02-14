@@ -26,3 +26,4 @@ const ex11 = require("./hard.ex11");
 const ex12 = require("./hard.ex12");
 
 console.log("Total Passed Cases:", counter.value,"/82")
+console.log("Passed: ",counter.value*100/82,'%' );

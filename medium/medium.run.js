@@ -39,3 +39,4 @@ const ex17 = require('./medium.ex17');
 const ex18 = require('./medium.ex18');
 
 console.log("Total Passed Cases:", counter.value,"/82")
+console.log("Passed: ",counter.value*100/82,'%' );

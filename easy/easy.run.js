@@ -32,3 +32,4 @@ const ex15 = require('./easy.ex15');
 // ex15.calculateFactorial()
 
 console.log("Total Passed Cases:", counter.value,"/82")
+console.log("Passed: ",counter.value*100/82,'%' );
